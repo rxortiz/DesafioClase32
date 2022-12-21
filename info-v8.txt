@@ -1,0 +1,637 @@
+Statistical profiling result from info-v8.log, (1419 ticks, 7 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     42    3.0%          /usr/lib/system/libsystem_kernel.dylib
+     21    1.5%          /usr/lib/system/libsystem_pthread.dylib
+     12    0.8%          /usr/lib/system/libsystem_malloc.dylib
+      7    0.5%          /usr/lib/system/libsystem_c.dylib
+      7    0.5%          /usr/lib/libc++.1.dylib
+      1    0.1%          /usr/lib/system/libsystem_platform.dylib
+      1    0.1%          /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      5    0.4%    0.4%  LazyCompile: *resolve node:path:1091:10
+      2    0.1%    0.2%  LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      2    0.1%    0.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      1    0.1%    0.1%  RegExp: ^\/register\/?$
+      1    0.1%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.1%    0.1%  LazyCompile: *validateString node:internal/validators:118:24
+      1    0.1%    0.1%  LazyCompile: *get node:_http_incoming:108:16
+      1    0.1%    0.1%  Function: ^validateNumber node:internal/validators:123:24
+      1    0.1%    0.1%  Function: ^shift node:internal/fixed_queue:80:8
+      1    0.1%    0.1%  Function: ^setHeader node:_http_outgoing:574:57
+      1    0.1%    0.1%  Function: ^push node:internal/fixed_queue:75:7
+      1    0.1%    0.1%  Function: ^parseurl /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/parseurl/index.js:35:19
+      1    0.1%    0.1%  Function: ^module.exports /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/qs/lib/parse.js:239:27
+      1    0.1%    0.1%  Function: ^memoryUsage node:internal/process/per_thread:168:23
+      1    0.1%    0.1%  Function: ^listenerCount node:events:858:23
+      1    0.1%    0.1%  Function: ^jsonParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:98:30
+      1    0.1%    0.1%  Function: ^isBuffer node:buffer:510:36
+      1    0.1%    0.1%  Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1    0.1%    0.1%  Function: ^getOptions node:internal/fs/utils:314:20
+      1    0.1%    0.1%  Function: ^get node:internal/streams/writable:787:8
+      1    0.1%    0.1%  Function: ^corsMiddleware /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:203:35
+      1    0.1%    0.1%  Function: ^construct node:internal/streams/destroy:225:19
+      1    0.1%    0.1%  Function: ^assert node:internal/assert:11:16
+      1    0.1%    0.1%  Function: ^alignPool node:buffer:159:19
+      1    0.1%    0.1%  Function: ^_getMaxListeners node:events:403:26
+      1    0.1%    0.1%  Function: ^_flush node:_http_outgoing:934:51
+      1    0.1%    0.1%  Function: ^_addHeaderLines node:_http_incoming:199:25
+      1    0.1%    0.1%  Function: ^_addHeaderLine node:_http_incoming:337:24
+      1    0.1%    0.1%  Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    0.1%    0.1%  Function: ^FastBuffer node:internal/buffer:958:14
+      1    0.1%    0.1%  Function: ^<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:640:19
+
+ [C++]:
+   ticks  total  nonlib   name
+    410   28.9%   30.9%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+    234   16.5%   17.6%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    222   15.6%   16.7%  t __posix_spawn_file_actions_grow
+    167   11.8%   12.6%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+    135    9.5%   10.2%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     26    1.8%    2.0%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     15    1.1%    1.1%  T _semaphore_destroy
+     12    0.8%    0.9%  T _mach_get_times
+     10    0.7%    0.8%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    0.7%    0.8%  T _mach_msg_server_once
+      7    0.5%    0.5%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.2%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.2%  T _mach_vm_map
+      2    0.1%    0.2%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.1%    0.2%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      2    0.1%    0.2%  t ___pfz_setup
+      2    0.1%    0.2%  T _task_info
+      2    0.1%    0.2%  T _task_dyld_process_info_notify_get
+      2    0.1%    0.2%  T __simple_putline
+      2    0.1%    0.2%  T __simple_getenv
+      1    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::BaseObject::decrease_refcount()
+      1    0.1%    0.1%  t __os_once_gate_wait
+      1    0.1%    0.1%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T _semaphore_create
+      1    0.1%    0.1%  T _mig_dealloc_reply_port
+      1    0.1%    0.1%  T _mach_port_type
+      1    0.1%    0.1%  T _mach_port_allocate
+      1    0.1%    0.1%  T __platform_strcmp
+      1    0.1%    0.1%  T ___bsdthread_terminate
+      1    0.1%    0.1%  T _OSAtomicDecrement32
+
+ [Summary]:
+   ticks  total  nonlib   name
+     37    2.6%    2.8%  JavaScript
+   1284   90.5%   96.7%  C++
+     66    4.7%    5.0%  GC
+     91    6.4%          Shared libraries
+      7    0.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    358   35.4%   25.2%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+    234   23.1%   16.5%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    167   16.5%   11.8%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+    135   13.4%    9.5%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     30    3.0%    2.1%  T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+     26    2.6%    1.8%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    1.0%    0.7%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    1.0%    0.7%  T _mach_msg_server_once
+      9    0.9%    0.6%  T _semaphore_destroy
+      7    0.7%    0.5%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.3%    0.2%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.1%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.1%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.2%    0.1%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      2    0.2%    0.1%  T _task_info
+      2    0.2%    0.1%  T __simple_putline
+      2    0.2%    0.1%  T __simple_getenv
+      1    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  t __os_once_gate_wait
+      1    0.1%    0.1%  t ___pfz_setup
+      1    0.1%    0.1%  T node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::loader::ModuleWrap::Link(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.1%  T _mig_dealloc_reply_port
+      1    0.1%    0.1%  T _OSAtomicDecrement32
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    410   28.9%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     52   12.7%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     43   82.7%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      5   11.6%        Function: ~<anonymous> node:http2:1:1
+      5  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      4    9.3%        Function: ~<anonymous> node:tls:1:1
+      4  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      4    9.3%        Function: ~<anonymous> node:internal/child_process:1:1
+      4  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      4    9.3%        Function: ~<anonymous> node:crypto:1:1
+      4  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      3    7.0%        Function: ~<anonymous> node:internal/http2/core:1:1
+      3  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2    4.7%        LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      2  100.0%          LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:146:60
+      2  100.0%            LazyCompile: ~moduleProvider node:internal/modules/esm/loader:279:28
+      2    4.7%        Function: ~<anonymous> node:http:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      2    4.7%        Function: ~<anonymous> node:_http_client:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1  100.0%          LazyCompile: ~get node:crypto:287:8
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    2.3%        LazyCompile: ~get node:dns:334:8
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1    2.3%        Function: ~<anonymous> node:tty:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.3%        Function: ~<anonymous> node:net:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:module:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.3%        Function: ~<anonymous> node:internal/worker:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:internal/http2/compat:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:https:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.3%        Function: ~<anonymous> node:dns:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.3%        Function: ~<anonymous> node:cluster:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:child_process:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.3%        Function: ~<anonymous> node:assert:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.3%        Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      5    9.6%      Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      5  100.0%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      5  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      5  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      4    7.7%      LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      3   75.0%        LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      3  100.0%          LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:252:58
+      3  100.0%            Function: ^moduleProvider node:internal/modules/esm/loader:279:28
+      1   25.0%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     26    6.3%    t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3   11.5%      t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2   66.7%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1   50.0%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   50.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1   33.3%        Function: ^<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/@faker-js/faker/dist/esm/chunk-AC7CIJLS.mjs:1:1
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      3   11.5%      LazyCompile: *realpathSync node:fs:2412:22
+      3  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      3  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      3  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      3   11.5%      Function: ^setHeader node:_http_outgoing:574:57
+      1   33.3%        Function: ^header /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:777:29
+      1  100.0%          Function: ^send /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:111:25
+      1  100.0%            Function: ^json /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:250:25
+      1   33.3%        Function: ^expressInit /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1   33.3%        Function: ^applyHeaders /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:144:24
+      1  100.0%          Function: ^applyHeaders /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:144:24
+      1  100.0%            Function: ^applyHeaders /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:144:24
+      2    7.7%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      1   50.0%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   50.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    3.8%      LazyCompile: ~parse /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/bytes/index.js:141:15
+      1  100.0%        LazyCompile: ~json /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:50:15
+      1  100.0%          Script: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:1:1
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    3.8%      LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:391:28
+      1  100.0%        LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:966:23
+      1  100.0%          LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1039:24
+      1  100.0%            LazyCompile: ~resolve node:internal/modules/esm/loader:509:16
+      1    3.8%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.8%      LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        Function: ^jsonParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%          Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1    3.8%      Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    3.8%      Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/fs-extra/lib/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    3.8%      Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    3.8%      Function: ^realpathSync node:fs:2412:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    3.8%      Function: ^pathtoRegexp /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%        Function: ^Layer /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%          Function: ^use /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:439:25
+      1  100.0%            LazyCompile: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/application.js:224:24
+      1    3.8%      Function: ^format /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/content-type/index.js:65:17
+      1  100.0%        Function: ^setCharset /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/utils.js:248:41
+      1  100.0%          Function: ^send /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:111:25
+      1  100.0%            Function: ^json /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:250:25
+      1    3.8%      Function: ^_handles_method /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:58:59
+      1  100.0%        LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          Function: ^jsonParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%            LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1    3.8%      Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    3.8%      Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    3.8%      Function: ^<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:204:37
+      1  100.0%        Function: ^optionsCallback /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:198:34
+      1  100.0%          Function: ^corsMiddleware /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:203:35
+      1  100.0%            LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+     20    4.9%    Function: ^memoryUsage node:internal/process/per_thread:168:23
+     20  100.0%      Function: ^<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:10:17
+     20  100.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+     20  100.0%          Function: ^next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:116:16
+     20  100.0%            Function: ^dispatch /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:98:45
+     16    3.9%    Function: ^cpus node:os:133:14
+     15   93.8%      Function: ^<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:10:17
+     15  100.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+     15  100.0%          Function: ^next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:116:16
+     15  100.0%            Function: ^dispatch /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:98:45
+      1    6.3%      LazyCompile: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:10:17
+      1  100.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:116:16
+      1  100.0%            LazyCompile: ~dispatch /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:98:45
+     12    2.9%    LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     12  100.0%      LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2   16.7%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2   16.7%        Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2   16.7%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    8.3%        LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:453:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    8.3%        LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:414:29
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    8.3%        Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    8.3%        Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    8.3%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    8.3%        Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     11    2.7%    LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      6   54.5%      Function: ^jsonParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:98:30
+      4   66.7%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%          Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      4  100.0%            LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      2   33.3%        LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      2  100.0%          LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      2  100.0%            Function: ^cors /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:159:16
+      2   18.2%      Function: ^urlencodedParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1   50.0%        LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^expressInit /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/middleware/init.js:29:30
+      1   50.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      1    9.1%      LazyCompile: *handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:136:31
+      1  100.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/application.js:165:29
+      1  100.0%          Function: ^app /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/express.js:38:21
+      1  100.0%            LazyCompile: *emit node:events:474:44
+      1    9.1%      Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:136:31
+      1  100.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/application.js:165:29
+      1  100.0%          Function: ^app /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/express.js:38:21
+      1  100.0%            Function: ^emit node:events:474:44
+      1    9.1%      Function: ^cors /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:159:16
+      1  100.0%        Function: ^<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:219:57
+      1  100.0%          Function: ^originCallback /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:213:39
+      1  100.0%            Function: ^<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/cors/lib/index.js:204:37
+      9    2.2%    Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      9  100.0%      Function: ^Socket._writeGeneric node:net:769:42
+      9  100.0%        Function: ^Socket._writev node:net:801:36
+      9  100.0%          Function: ^doWrite node:internal/streams/writable:398:17
+      9  100.0%            Function: ^clearBuffer node:internal/streams/writable:529:21
+      9    2.2%    Function: ^expressInit /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/middleware/init.js:29:30
+      5   55.6%      LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      5  100.0%        LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      5  100.0%          Function: ^query /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/middleware/query.js:39:24
+      5  100.0%            LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      4   44.4%      Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%        Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      2   50.0%          LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      2  100.0%            Function: ^query /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/middleware/query.js:39:24
+      2   50.0%          Function: ^<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:280:64
+      2  100.0%            Function: ^process_params /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:338:47
+      6    1.5%    LazyCompile: *compileFunction node:vm:308:25
+      6  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      6  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      6  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      6  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      5    1.2%    Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:136:31
+      3   60.0%      Function: ^router /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:46:18
+      2   66.7%        LazyCompile: *trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      2  100.0%          LazyCompile: *next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      2  100.0%            Function: ^jsonParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:98:30
+      1   33.3%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            Function: ^<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:280:64
+      2   40.0%      Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/application.js:165:29
+      2  100.0%        Function: ^app /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/express.js:38:21
+      2  100.0%          Function: ^emit node:events:474:44
+      2  100.0%            Function: ^parserOnIncoming node:_http_server:852:26
+      5    1.2%    Function: ^get node:_http_incoming:108:16
+      5  100.0%      Function: ^parserOnIncoming node:_http_server:852:26
+      5  100.0%        Function: ^parserOnHeadersComplete node:_http_common:77:33
+      5    1.2%    Function: ^<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:10:17
+      5  100.0%      Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      5  100.0%        Function: ^next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:116:16
+      5  100.0%          Function: ^dispatch /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:98:45
+      5  100.0%            Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+
+    234   16.5%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    234  100.0%    Function: ^compileFunction node:vm:308:25
+    232   99.1%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    231   99.6%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+    223   96.5%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+    223  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      8    3.5%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      8  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+
+    222   15.6%  t __posix_spawn_file_actions_grow
+
+    167   11.8%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+    166   99.4%    Function: ^moduleStrategy node:internal/modules/esm/translators:110:56
+    166  100.0%      Function: ^moduleProvider node:internal/modules/esm/loader:279:28
+    166  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+
+    135    9.5%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+    134   99.3%    Function: ^readSync node:fs:684:18
+    133   99.3%      Function: ^tryReadSync node:fs:429:21
+    133  100.0%        Function: ^readFileSync node:fs:450:22
+    118   88.7%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+    118  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     11    8.3%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      7   63.6%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      4   36.4%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      3    2.3%          LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1162:39
+      3  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+
+     42    3.0%  /usr/lib/system/libsystem_kernel.dylib
+     25   59.5%    LazyCompile: *cpus node:os:133:14
+     25  100.0%      Function: ^<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:10:17
+     25  100.0%        Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+     25  100.0%          Function: ^next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:116:16
+     25  100.0%            Function: ^dispatch /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:98:45
+      4    9.5%    LazyCompile: *compileFunction node:vm:308:25
+      4  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      4  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      4  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.4%    t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%      LazyCompile: ~cache node:internal/http:26:15
+      1  100.0%        LazyCompile: ~utcDate node:internal/http:21:17
+      1  100.0%          LazyCompile: ~_storeHeader node:_http_outgoing:374:22
+      1  100.0%            LazyCompile: ~writeHead node:_http_server:269:19
+      1    2.4%    LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    LazyCompile: ~setupPerfHooks node:internal/bootstrap/pre_execution:220:24
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.4%    LazyCompile: ~realpathSync node:fs:2412:22
+      1  100.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    2.4%    LazyCompile: ~onParseError node:internal/url:551:22
+      1  100.0%      t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%        LazyCompile: ~URL node:internal/url:620:14
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:966:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1039:24
+      1    2.4%    LazyCompile: ~immediate /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/helpers/immediate.js:14:36
+      1  100.0%      LazyCompile: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/connection.js:574:34
+      1  100.0%        LazyCompile: ~promiseOrCallback /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1  100.0%          LazyCompile: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/connection.js:567:18
+      1  100.0%            LazyCompile: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/model.js:1468:52
+      1    2.4%    LazyCompile: ~header /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:777:29
+      1  100.0%      LazyCompile: ~send /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:111:25
+      1  100.0%        LazyCompile: ~json /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/response.js:250:25
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/inforouter.js:10:17
+      1  100.0%            Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1    2.4%    LazyCompile: ~de file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/@faker-js/faker/dist/esm/chunk-G6GIS7LZ.mjs:12:15055
+      1  100.0%      Script: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/@faker-js/faker/dist/esm/index.mjs:1:1
+      1  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          T node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:192:12
+      1    2.4%    LazyCompile: ~arrayFlatten /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/array-flatten/array-flatten.js:58:23
+      1  100.0%      LazyCompile: ~Route.<computed> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:202:37
+      1  100.0%        LazyCompile: ~proto.<computed> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:519:27
+      1  100.0%          Script: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/src/routes/cartsrouter.js:1:1
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    2.4%    LazyCompile: ~_handles_method /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/route.js:58:59
+      1  100.0%      Function: ^next /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        LazyCompile: ~jsonParser /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%          Function: ^handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:293:23
+      1    2.4%    LazyCompile: *realpathSync node:fs:2412:22
+      1  100.0%      Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1    2.4%    Function: ~<anonymous> node:internal/modules/cjs/helpers:1:1
+      1  100.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+
+     26    1.8%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     26  100.0%    Function: ^read node:internal/modules/package_json_reader:16:14
+     24   92.3%      Function: ^readPackage node:internal/modules/cjs/loader:290:21
+     23   95.8%        Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+     23  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     22   95.7%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    4.3%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    4.2%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    3.8%      LazyCompile: ~readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    3.8%      Function: ^getPackageConfig node:internal/modules/esm/resolve:192:26
+      1  100.0%        Function: ^packageResolve node:internal/modules/esm/resolve:875:24
+      1  100.0%          Function: ^moduleResolve node:internal/modules/esm/resolve:966:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1039:24
+
+     21    1.5%  /usr/lib/system/libsystem_pthread.dylib
+      8   38.1%    LazyCompile: *compileFunction node:vm:308:25
+      8  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      8  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      8  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      8  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2    9.5%    t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   50.0%      LazyCompile: ~Kareem.filter /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/kareem/index.js:380:35
+      1  100.0%        LazyCompile: ~applyHooks /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/helpers/model/applyHooks.js:40:20
+      1  100.0%          LazyCompile: ~compile /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/model.js:5007:33
+      1  100.0%            LazyCompile: ~Mongoose._model /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/index.js:617:37
+      1   50.0%      Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2    9.5%    Function: ~<anonymous> node:internal/fs/promises:1:1
+      2  100.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2  100.0%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.8%    LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%      LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1    4.8%    LazyCompile: ~value node:internal/console/constructor:321:20
+      1  100.0%      LazyCompile: ~log node:internal/console/constructor:359:6
+      1  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/server.js:62:33
+      1  100.0%            LazyCompile: ~onceWrapper node:events:640:21
+      1    4.8%    LazyCompile: ~validate_config /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%      LazyCompile: ~exports.find /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%        Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    4.8%    LazyCompile: ~realpathSync node:fs:2412:22
+      1  100.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    4.8%    LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:966:23
+      1  100.0%      LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1039:24
+      1  100.0%        LazyCompile: ~resolve node:internal/modules/esm/loader:509:16
+      1  100.0%          LazyCompile: ~getModuleJob node:internal/modules/esm/loader:242:21
+      1  100.0%            LazyCompile: ~import node:internal/modules/esm/loader:324:15
+      1    4.8%    LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%      LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%        LazyCompile: ~cache node:internal/http:26:15
+      1  100.0%          LazyCompile: ~utcDate node:internal/http:21:17
+      1  100.0%            LazyCompile: ~_storeHeader node:_http_outgoing:374:22
+      1    4.8%    LazyCompile: ~fromStringFast node:buffer:413:24
+      1  100.0%      LazyCompile: ~fromString node:buffer:432:20
+      1  100.0%        LazyCompile: ~from node:buffer:296:28
+      1  100.0%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.8%    LazyCompile: ~SchemaType /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/schematype.js:42:20
+      1  100.0%      LazyCompile: ~SchemaString /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/schema/string.js:25:22
+      1  100.0%        LazyCompile: ~Schema.interpretAsType /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/schema.js:1163:44
+      1  100.0%          LazyCompile: ~Schema.path /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/schema.js:895:33
+      1  100.0%            LazyCompile: ~add /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/mongoose/lib/schema.js:581:36
+      1    4.8%    Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/bson/lib/binary.js:268:36
+      1  100.0%      Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/bson/lib/binary.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+
+     15    1.1%  T _semaphore_destroy
+      1    6.7%    LazyCompile: ~value node:internal/console/constructor:321:20
+      1  100.0%      LazyCompile: ~log node:internal/console/constructor:359:6
+      1  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~<anonymous> file:///Users/gmoreyra/Mi%20unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/server.js:62:33
+      1  100.0%            LazyCompile: ~onceWrapper node:events:640:21
+      1    6.7%    LazyCompile: ~toString node:buffer:783:46
+      1  100.0%      LazyCompile: ~decode node:internal/encoding:408:11
+      1  100.0%        LazyCompile: ~stringify node:internal/modules/esm/translators:90:19
+      1  100.0%          LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:110:56
+      1  100.0%            LazyCompile: ~moduleProvider node:internal/modules/esm/loader:279:28
+      1    6.7%    LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:81:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%    LazyCompile: ~handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/router/index.js:136:31
+      1  100.0%      LazyCompile: ~handle /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/application.js:165:29
+      1  100.0%        LazyCompile: ~app /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/express/lib/express.js:38:21
+      1  100.0%          Function: ^emit node:events:474:44
+      1  100.0%            LazyCompile: ~parserOnIncoming node:_http_server:852:26
+      1    6.7%    LazyCompile: ~defaultGetSource node:internal/modules/esm/get_source:25:32
+      1  100.0%      Function: ^defaultLoad node:internal/modules/esm/load:13:27
+      1  100.0%        Function: ^load node:internal/modules/esm/loader:353:13
+      1  100.0%          Function: ^moduleProvider node:internal/modules/esm/loader:279:28
+      1  100.0%            Function: ^ModuleJob node:internal/modules/esm/module_job:56:14
+      1    6.7%    LazyCompile: ~callback node:internal/streams/writable:550:44
+      1  100.0%      LazyCompile: ~afterWrite node:internal/streams/writable:487:20
+      1  100.0%        LazyCompile: ~afterWriteTick node:internal/streams/writable:482:24
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    6.7%    LazyCompile: ~_storeHeader node:_http_outgoing:374:22
+      1  100.0%      LazyCompile: ~writeHead node:_http_server:269:19
+      1  100.0%        Function: ^_implicitHeader node:_http_server:264:68
+      1  100.0%          LazyCompile: ~write_ node:_http_outgoing:730:16
+      1  100.0%            LazyCompile: ~end node:_http_outgoing:833:45
+      1    6.7%    Function: ~<anonymous> /Users/gmoreyra/Mi unidad/_CODERHOUSE/04-Backend/ecommerceCoderhouse/server/node_modules/finalhandler/index.js:1:1
+      1  100.0%      LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1    6.7%    Function: ^setRequestTimeout node:_http_server:762:27
+
